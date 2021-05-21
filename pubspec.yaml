@@ -28,6 +28,7 @@ dependencies:
   firebase_core: ^1.2.0
   flutter_hooks: ^0.17.0
   gap: ^2.0.0
+  google_sign_in: ^5.0.3
   hooks_riverpod: ^0.14.0+4
   one_context: ^1.1.0
 
