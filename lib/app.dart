@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertest/ui/homepage/homepage.dart';
+import 'package:fluttertest/ui/onboardingpage/onboarding_page.dart';
+import 'package:one_context/one_context.dart';
 
 class App extends StatelessWidget {
   // This widget is the root of your application.
@@ -7,10 +8,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      builder: OneContext().builder,
+      navigatorKey: OneContext().key,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: OnBoardingPage(),
     );
   }
 }
