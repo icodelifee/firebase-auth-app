@@ -29,7 +29,7 @@ class SignInButton extends HookWidget {
     final loading = useValueNotifier(false);
     return ValueListenableBuilder(
       valueListenable: loading,
-      builder: (context, value, child) => MaterialButton(
+      builder: (context, bool value, child) => MaterialButton(
         onPressed: () => _signIn(loading, context),
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -39,7 +39,7 @@ class SignInButton extends HookWidget {
           width: OneContext().mediaQuery.size.width / 1.3,
           child: Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
-            child: value != null
+            child: value
                 ? Center(
                     child: CircularProgressIndicator(
                       color: Colors.white,
