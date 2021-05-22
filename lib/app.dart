@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertest/ui/onboardingpage/onboarding_page.dart';
+import 'package:fluttertest/auth_locator.dart';
 import 'package:one_context/one_context.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: OnBoardingPage(),
+      home: AuthLocator(),
     );
   }
 }
