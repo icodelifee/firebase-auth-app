@@ -1,6 +1,7 @@
 class Constants {
   Constants._();
-  static final phoneNumberLimit = 10;
-  static final countryCode = '+91';
-  static final apiUrl = 'https://www.mocky.io/v2/5dfccffc310000efc8d2c1ad';
+  static const phoneNumberLimit = 10;
+  static const countryCode = '+91';
+  static const apiUrl = 'https://www.mocky.io/v2/';
+  static const sarConversionRate = 19.44;
 }
