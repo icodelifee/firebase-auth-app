@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:fluttertest/ui/phoneauthpage/widgets/otp_text_field.dart';
-import 'package:fluttertest/ui/phoneauthpage/widgets/phone_auth_button.dart';
-import 'package:fluttertest/ui/phoneauthpage/widgets/phone_text_field.dart';
-import 'package:fluttertest/ui/widgets/onboarding_logo.dart';
 import 'package:gap/gap.dart';
+
+import '../widgets/onboarding_logo.dart';
+import 'widgets/otp_text_field.dart';
+import 'widgets/phone_auth_button.dart';
+import 'widgets/phone_text_field.dart';
 
 class PhoneAuthPage extends HookWidget {
   PhoneAuthPage({Key? key}) : super(key: key);

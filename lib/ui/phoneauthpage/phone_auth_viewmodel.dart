@@ -29,7 +29,7 @@ class PhoneAuthViewModel extends ChangeNotifier {
   }
 
   Future getOTP(String phone) async {
-    final PhoneCodeSent codeSent = (String vId, int? resendToken) async {
+    final PhoneCodeSent codeSent = (vId, resendToken) async {
       actualCode = vId;
       print('Code sent to $phone');
       isOTP = true;
@@ -37,12 +37,12 @@ class PhoneAuthViewModel extends ChangeNotifier {
       notifyListeners();
       await OneContext().showSnackBar(
         builder: (_) => SnackBar(
-          content: Text('Enter the code sent to ' + phone),
+          content: Text('Enter the code sent to $phone'),
         ),
       );
     };
 
-    final codeAutoRetrievalTimeout = (String verificationId) {
+    final codeAutoRetrievalTimeout = (verificationId) {
       actualCode = verificationId;
       OneContext().showSnackBar(
         builder: (_) => SnackBar(
@@ -51,10 +51,10 @@ class PhoneAuthViewModel extends ChangeNotifier {
       );
     };
 
-    final verificationFailed = (FirebaseAuthException authException) {
-      status = '${authException.message}';
+    final verificationFailed = (authException) {
+      status = authException.message;
 
-      print('Error message: ' + status!);
+      print('Error message: ${status!}');
       if (authException.message!.contains('not authorized')) {
         status = 'Something has gone wrong, please try later';
       } else {
@@ -72,8 +72,7 @@ class PhoneAuthViewModel extends ChangeNotifier {
       );
     };
 
-    final PhoneVerificationCompleted verificationCompleted =
-        (AuthCredential auth) async {
+    final PhoneVerificationCompleted verificationCompleted = (auth) async {
       await FirebaseAuth.instance.signInWithCredential(auth);
       await OneContext().pushAndRemoveUntil(
           MaterialPageRoute(builder: (_) => AuthLocator()), (route) => false);

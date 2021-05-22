@@ -7,7 +7,7 @@ import 'package:one_context/one_context.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SignInButton extends HookWidget {
-  SignInButton({
+  const SignInButton({
     required this.text,
     required this.buttonColor,
     this.icon,
@@ -29,7 +29,7 @@ class SignInButton extends HookWidget {
     final loading = useValueNotifier(false);
     return ValueListenableBuilder(
       valueListenable: loading,
-      builder: (context, bool value, child) => MaterialButton(
+      builder: (context, value, child) => MaterialButton(
         onPressed: () => _signIn(loading, context),
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -39,26 +39,26 @@ class SignInButton extends HookWidget {
           width: OneContext().mediaQuery.size.width / 1.3,
           child: Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
-            child: value
+            child: value != null
                 ? Center(
                     child: CircularProgressIndicator(
                       color: Colors.white,
                     ),
                   )
                 : Row(
-                    mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      icon == null
-                          ? ImageIcon(
-                              NetworkImage(iconImage),
-                              size: 25,
-                              color: Colors.white,
-                            )
-                          : Icon(
-                              icon,
-                              color: Colors.white,
-                            ),
+                      if (icon == null)
+                        ImageIcon(
+                          NetworkImage(iconImage),
+                          size: 25,
+                          color: Colors.white,
+                        )
+                      else
+                        Icon(
+                          icon,
+                          color: Colors.white,
+                        ),
                       Text(
                         text,
                         style: TextStyle(

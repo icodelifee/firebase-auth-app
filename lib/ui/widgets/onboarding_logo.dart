@@ -13,7 +13,6 @@ class OnboardingLogo extends StatelessWidget {
     return Image.network(
       _logoImage,
       width: OneContext().mediaQuery.size.width / 2,
-      alignment: Alignment.center,
     );
   }
 }

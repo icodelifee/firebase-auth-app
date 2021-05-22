@@ -15,7 +15,6 @@ class OnBoardingPage extends StatelessWidget {
           height: OneContext().mediaQuery.size.height,
           width: OneContext().mediaQuery.size.width,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               OnboardingLogo(),

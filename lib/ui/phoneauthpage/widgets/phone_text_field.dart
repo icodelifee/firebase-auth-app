@@ -19,7 +19,7 @@ class PhoneTextField extends StatelessWidget {
       controller: phone,
       keyboardType: TextInputType.phone,
       validator: (value) {
-        final limit = Constants.phoneNumberLimit;
+        const limit = Constants.phoneNumberLimit;
         if (value == '') {
           return 'Please enter a valid phone number';
         } else if (value!.length != limit) {
