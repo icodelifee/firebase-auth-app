@@ -7,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Firebase',
       builder: OneContext().builder,
       navigatorKey: OneContext().key,
       theme: ThemeData(
