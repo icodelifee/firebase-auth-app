@@ -4,11 +4,9 @@ import 'package:one_context/one_context.dart';
 class OnboardingLogo extends StatelessWidget {
   const OnboardingLogo({
     Key? key,
-    required String logoImage,
-  })  : _logoImage = logoImage,
-        super(key: key);
+  }) : super(key: key);
 
-  final String _logoImage;
+  final String _logoImage = 'https://img.icons8.com/color/452/firebase.png';
 
   @override
   Widget build(BuildContext context) {
