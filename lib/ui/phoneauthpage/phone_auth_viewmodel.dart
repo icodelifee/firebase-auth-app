@@ -2,14 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertest/auth_locator.dart';
-import 'package:fluttertest/data/providers/auth_listener_provider.dart';
 import 'package:fluttertest/data/providers/auth_repository_provider.dart';
 import 'package:fluttertest/data/providers/firebase_auth_provider.dart';
 import 'package:fluttertest/data/repository/auth_repository.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:one_context/one_context.dart';
 
-final phoneAuthViewProvider = ChangeNotifierProvider((ref) =>
+final phoneAuthViewProvider = ChangeNotifierProvider.autoDispose((ref) =>
     PhoneAuthViewModel(
         ref.read(authRespositoryProvider), ref.read(firebaseAuthProvider)));
 
