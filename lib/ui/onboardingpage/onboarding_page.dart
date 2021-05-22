@@ -32,7 +32,7 @@ class OnBoardingPage extends StatelessWidget {
                       text: 'Phone',
                       buttonColor: Colors.green,
                       icon: Icons.phone,
-                      route: HomePage(),
+                      route: PhoneAuthPage(),
                       isGoogleAuth: false),
                 ],
               )
