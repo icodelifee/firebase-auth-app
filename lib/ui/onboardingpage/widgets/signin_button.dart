@@ -81,8 +81,9 @@ class SignInButton extends HookWidget {
       final auth = context.read(authRespositoryProvider);
       auth.signInWithGoogle().then((value) {
         // push and remove all previous routes to homepage
-        OneContext().pushAndRemoveUntil(
-            MaterialPageRoute(builder: (_) => route), (route) => false);
+        // OneContext().pushAndRemoveUntil(
+        //     MaterialPageRoute(builder: (_) => route), (route) => false);
+        // commented out because it messes up the auth listener
       }).catchError((err) {
         if (err.runtimeType == FirebaseAuthException) {
           OneContext().showSnackBar(
