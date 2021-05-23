@@ -1,7 +1,7 @@
 # Flutter Firebase / REST API Demo
 
 ### Download APK
-[app-release.apk](https://github.com/icodelifee/firebase-auth-app/blob/main/apk/app-release.apk)
+[app-release.apk](https://github.com/icodelifee/firebase-auth-app/raw/main/apk/app-release.apk)
 
 ## Screenshots
 <table>
