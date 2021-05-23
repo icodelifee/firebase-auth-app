@@ -1,16 +1,42 @@
-# fluttertest
+# Flutter Firebase / REST API Demo
 
-A new Flutter project.
+### Download APK
+[app-release.apk](https://github.com/icodelifee/firebase-auth-app/blob/main/apk/app-release.apk)
 
-## Getting Started
+## Screenshots
+<table>
+  <tr>
+    <td> <img src="./screenshots/onboarding.jpg"  alt="1" width = 200px ></td>
+    <td> <img src="./screenshots/phone auth.jpg"  alt="1" width = 200px ></td>
+    <td> <img src="./screenshots/home.jpg"  alt="1" width = 200px ></td>
+    <td> <img src="./screenshots/drawer.jpg"  alt="1" width = 200px ></td>
+    <td> <img src="./screenshots/cart.jpg"  alt="1" width = 200px ></td>
+    <td> <img src="./screenshots/order placed.jpg"  alt="1" width = 200px ></td>
+   </tr> 
 
-This project is a starting point for a Flutter application.
+  </tr>
+</table>
 
-A few resources to get you started if this is your first Flutter project:
+## Build Setup
+``` bash
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# install dependencies
+$ flutter pub get
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# run debug mode
+$ flutter run
+
+# run release mode
+$ flutter run --release
+
+# build app bundle
+$ flutter build appbundle
+
+# build apk
+$ flutter build apk
+
+```
+
+  
+
+For detailed explanation on how things work, check out [Flutter docs](https://flutter.dev/docs).
