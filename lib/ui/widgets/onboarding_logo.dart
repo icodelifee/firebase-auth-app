@@ -6,12 +6,10 @@ class OnboardingLogo extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final String _logoImage = 'https://img.icons8.com/color/452/firebase.png';
-
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-      _logoImage,
+    return Image.asset(
+      'assets/firebase.png',
       width: OneContext().mediaQuery.size.width / 2,
     );
   }

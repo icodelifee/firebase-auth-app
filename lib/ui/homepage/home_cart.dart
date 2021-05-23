@@ -47,12 +47,15 @@ class HomeCart extends HookWidget {
                           final dishcounter = provider.cartList[index];
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 10),
+                              vertical: 20,
+                              horizontal: 10,
+                            ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 DishCategory(
-                                    dishType: dishcounter.dish.dishType!),
+                                  dishType: dishcounter.dish.dishType!,
+                                ),
                                 Gap(30),
                                 _dishDetails(dishcounter),
                                 Flexible(
@@ -61,7 +64,7 @@ class HomeCart extends HookWidget {
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           );
